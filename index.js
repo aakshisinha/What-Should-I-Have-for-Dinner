@@ -1,4 +1,21 @@
+let dishValues = [];
+
 window.addEventListener("load", () => {
+  const card = document.getElementById("card");
+
+  fetch("dishes.json")
+  .then((response) => response.json())
+  .then((data) => {
+    dishValues = data.dishes;
+    generateCard();
+  });
+
+
+  card.addEventListener("click", generateCard);
+  card.addEventListener("touchstart", generateCard);
+});
+
+function generateCard() {
   const values = [
     "Chicken Parm",
     "Fried Rice",
@@ -29,4 +46,4 @@ window.addEventListener("load", () => {
   cardSymbolHeader.innerHTML = `<p style="color:${colors[randomColorIndex]}">${symbols[randomSymbolIndex]}</p>`;
   cardValue.innerHTML = `<p>${values[randomValueIndex]}</p>`;
   cardSymbolFooter.innerHTML = `<p style="color:${colors[randomColorIndex]}">${symbols[randomSymbolIndex]}</p>`;
-});
+};
