@@ -57,16 +57,22 @@ h1 {
   font-size: 70px;
 }
 
-/* Media query para pantallas medianas */
+
 @media screen and (min-width: 576px) {
   #card {
-    width: 40%; /* Reducimos el ancho para pantallas medianas */
+    width: 40%; 
   }
 }
 
-/* Media query para pantallas grandes */
+@media screen and (max-width: 500px) {
+ h1 {
+    font-size: 3rem; 
+  }
+}
+
+
 @media screen and (min-width: 768px) {
   #card {
-    width: 25%; /* Establecemos el ancho original para pantallas más grandes */
+    width: 25%;
   }
 }
