@@ -16,21 +16,7 @@ window.addEventListener("load", () => {
 });
 
 function generateCard() {
-  const values = [
-    "Chicken Parm",
-    "Fried Rice",
-    "Avo Toast",
-    "Pasta & Beef",
-    "Cereal Milk",
-    "Yogurt & Granola",
-    "Brocoli Soup",
-    "Egg Drop Soup",
-    "Ramen",
-    "Hot Chocolate",
-    "Hot milk",
-    "Tea",
-    "read?",
-  ];
+  if (dishValues.length === 0) return;
 
   const symbols = ["♠", "♣", "♦", "♥"];
   const colors = ["red", "black"];
@@ -39,11 +25,11 @@ function generateCard() {
   const cardValue = document.getElementById("card-value");
   const cardSymbolFooter = document.getElementById("card-symbol-footer");
 
-  const randomValueIndex = Math.floor(Math.random() * values.length);
+  const randomValueIndex = Math.floor(Math.random() * dishValues.length);
   const randomSymbolIndex = Math.floor(Math.random() * symbols.length);
   const randomColorIndex = Math.floor(Math.random() * colors.length);
 
   cardSymbolHeader.innerHTML = `<p style="color:${colors[randomColorIndex]}">${symbols[randomSymbolIndex]}</p>`;
-  cardValue.innerHTML = `<p>${values[randomValueIndex]}</p>`;
+  cardValue.innerHTML = `<p>${dishValues[randomValueIndex]}</p>`;
   cardSymbolFooter.innerHTML = `<p style="color:${colors[randomColorIndex]}">${symbols[randomSymbolIndex]}</p>`;
-};
+}
