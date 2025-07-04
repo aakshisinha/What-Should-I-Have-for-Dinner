@@ -23,6 +23,8 @@ h1 {
   font-weight: 500;
   font-style: normal;
   font-size: 4rem;
+  display: flex;
+  justify-content: center;
 }
 
 #card {
@@ -43,7 +45,7 @@ h1 {
 
 #card-value {
   text-align: center;
-  font-size: 3.2rem;
+  font-size: 2.5rem;
   color: #ed6a92;
   font-family: "Pangolin", cursive;
   font-weight: 500;

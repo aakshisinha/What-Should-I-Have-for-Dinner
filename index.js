@@ -11,8 +11,8 @@ window.addEventListener("load", () => {
   });
 
 
-  card.addEventListener("click", generateCard);
-  card.addEventListener("touchstart", generateCard);
+  card.addEventListener("pointerdown", generateCard);
+  //card.addEventListener("touchstart", generateCard);
 });
 
 function generateCard() {
